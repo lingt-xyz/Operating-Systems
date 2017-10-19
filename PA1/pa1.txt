@@ -1,0 +1,55 @@
+Task#1
+  
+	Explanation:
+    
+		Content switch could happen between deposit() and withdraw(). Consequently it may cause overwriting the value of balance in the register.
+  
+	Modify Y=20:
+    
+		The results would not be affected. Because content switch happens between deposit() and withdraw().
+    
+		The equivalent situation in operating system is that modifying data without synchronization thus generates dirty data.
+
+Task#2
+  
+	Start order of threads:
+    
+		The system determines the start order of the threads.
+  
+	Life cycle of a thread:
+    
+		A thread would first be created.
+    
+		By being invoked it would be put in the ready queue.
+    
+		When the system has scheduled this thread, and it is dispatch by the scheduler, the thread would be running.
+    
+		If the thread is interrupted, it would be back to the ready queue.
+    
+		If the thread requires I/O or other system calls that has to been done before it can continue executing, it would go to waiting state.
+    
+		After the I/O is done or the system calls have completed, the thread would be back to the ready queue.
+    
+		When a running thread has finished, it would exit and be the state of terminated.
+
+
+
+Task#3
+  3A
+  3B
+
+  
+
+Task#4
+  4A
+  4B
+  
+
+
+Task#5
+  
+	Compare #4 and #5:
+    
+		Block level synchronization should theoretically be faster than method level synchronization.
+    
+		Because the former would only lock the code in the synchronized curly braces, but the latter would block the whole method. 
