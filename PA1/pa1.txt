@@ -8,7 +8,7 @@ Task#1
     
 		The results would not be affected. Because content switch happens between deposit() and withdraw().
     
-		The equivalent situation in operating system is that modifying data without synchronization thus generates dirty data.
+		The equivalent situation in operating system is that a printer is in use but another request has been made to performe a printing task.
 
 Task#2
   
