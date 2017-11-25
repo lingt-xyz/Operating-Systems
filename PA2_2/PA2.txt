@@ -1,0 +1,4 @@
+Task 1:
+	No.
+	The given semaphore class can have negative inital value.
+	And its absolute value does not indicate the number of processes/threads on its wait queue.
