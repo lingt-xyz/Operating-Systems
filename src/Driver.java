@@ -29,7 +29,7 @@ public class Driver {
 	}
 
 	void signal_() throws InterruptedException {// S1, R1
-		// I have to take a look at the resource sheet and check the availability of resource.
+		// I have to take a look at the resource sheet and change the availability of resource.
 		// after producing if it's still none positive, that means someone is on the waiting list, so I have to notify him or her.
 		// or, if it's positive, means I have produced more products than reservation, so no one would be on the waiting list.
 		mutex.acquire();// acquire lock
@@ -38,10 +38,6 @@ public class Driver {
 		if (S1 <= 0 || R1 <= 0) {
 			block.release();// sufficient resource have been produced
 		}
-		// what would happen if we do not check?
-		// think of a scenario that multiple threads have invoked signal_() so the block would be positive
-		// at when a same number of threads have invoked wait_(), and then one more thread has invoked wait_() again.
-		// The block is positive, but the resource is empty. so the resource become non-consistent.
 		mutex.release();// release lock
 	}
 }
